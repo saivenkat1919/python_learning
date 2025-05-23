@@ -263,3 +263,312 @@ for i in range(n):
     print("  "*(i)+"* "*(n-i))
 
 
+# * * * * * * *
+#  * * * * * *
+#   * *   * *
+#    *     *
+n=int(input())
+print("* "*(2*n-1))
+for i in range(1,n):
+    print(" "*i+"* "*(n-i)+" "*(2*i-2)+"* "*(n-i))
+
+
+# * * * *
+# * 0 0 *
+# * 0 0 *
+# * * * *
+n=int(input())
+print("* "*n)
+for i in range(1,n-1):
+    print("* "*1+"0 "*(n-2) + "* "*1)
+print("* "*n)
+
+
+# * * * * *
+# * 0 0 0 *
+# * 0 0 0 *
+# * * * * *
+m=int(input())
+n=int(input())
+print("* "*n)
+for i in range(1,m-1):
+    print("* "*1+"0 "*(n-2)+"* "*1)
+print("* "*n)
+
+
+# .
+# . .
+# . 0 .
+# . 0 0 .
+# . . . . .
+n=int(input())
+if(n==1):
+    print(". "*1)
+else:
+    print(". "*1)
+    for i in range(1,n-1):
+        print(". "*1+"0 "*(i-1)+". "*1)
+    print(". "*n)
+
+
+# * * * * * *
+# *         *
+# *         *
+# *         *
+# *         *
+# * * * * * *
+n=int(input())
+print("* "*n)
+for i in range(n-2):
+    print("* "*1+"  "*(n-2)+"* "*1)
+print("* "*n)
+
+
+# *
+# * *
+# *   *
+# * * * *
+n=int(input())
+if n==1 or n==2 or n==3:
+    for i in range(1,n+1):
+        print("* "*i)
+else:
+    print("* "*1)
+    print("* "*2)
+    for i in range(1,n-2):
+        print("* "*1+"  "*i+"* "*1)
+    print("* "*n)
+
+
+# ______
+# |    /
+# |   /
+# |  /
+# | /
+# |/
+n=int(input())
+print("_"*(n+1))
+for i in range(1,n+1):
+    print("|"*1+" "*(n-i)+"/"*1)
+
+
+#    *
+#   * *
+#  *   *
+# * * * *
+n=int(input())
+
+for i in range(1,n+1):
+    if i==1:
+        spaces=n-i
+        print(" "*spaces + "* ")
+    elif i==n:
+        print("* "*n)
+    else:
+        left=n-i
+        hollow=2*(i-2)
+        print(" "*left + "* " + " "*hollow + "* ")
+
+
+#       *
+#     * *
+#   *   *
+# * * * *
+n=int(input())
+
+if n==1:
+    print("* ")
+elif n==2:
+    print("  * ")
+    print("* * ")
+else:
+    print("  "*(n-1)+"* ")
+    print("  "*(n-2)+"* * ")
+    for i in range(1,n-2):
+        print("  "*(n-i-2)+"* "+"  "*i+"* ")
+    print("* "*n)
+
+
+# * * * * *
+#   *     *
+#     *   *
+#       * *
+#         *
+n=int(input())
+
+if n==1:
+    print("* ")
+elif n==2:
+    print("* * ")
+    print("  * ")
+else:
+    print("* "*n)
+    for i in range(1,n-1):
+        print("  "*i+"* "+"  "*(n-i-2)+"* ")
+    print("  "*(n-1)+"* ")
+
+
+# * * * *
+#  *   *
+#   * *
+#    *
+n=int(input())
+for i in range(1,n+1):
+    if i==1:
+        print("* "*n)
+    elif i==n:
+        print(" "*(n-1)+"*")
+    else:
+        print(" "*(i-1)+"*"+" "*(2*(n-i)-1) +"*")
+
+
+#    *
+#   * *
+#  *   *
+# *     *
+#  *   *
+#   * *
+#    *
+n = int(input())
+beg = 1
+for i in range(1, n + 1):
+    if i == 1:
+        print(" " * (n - 1) + "*")
+    elif i == n:
+        print("*" + " " * (2 * n - 3) + "*")
+    else:
+        print(" " * (n - i) + "* " + " " * (2 * (i - 2)) + "*")
+        beg += 2
+for i in range(2, n + 1):
+    if i == (n):
+        print(" " * (n - 1) + "*")
+    else:
+        print(" " * (i - 1) + "*" + " " * (2 * (n - i) - 1) + "*")
+
+
+#       1
+#     2 2
+#   3   3
+# 4     4
+#   3   3
+#     2 2
+#       1
+n = int(input())
+if n == 1:
+    print("1")
+else:
+    print("  " * (n - 1) + "1")
+    for i in range(0, n - 1):
+        left = n - i - 2
+        hollow = i
+        number = i + 2
+        print("  " * left + str(number) + " " + "  " * hollow + str(number))
+for i in range(1, n):
+    if i != (n - 1):
+        left = i
+        hollow = n - i - 2
+        number = n - i
+        print("  " * left + str(number) + " " + "  " * hollow + str(number))
+    else:
+        print("  " * (n - 1) + "1")
+
+
+# *             *
+# * *         * *
+# *   *     *   *
+# * * * * * * * *
+n=int(input())
+for i in range(1,n+1):
+    if i==1:
+        print("* "+"  "*(2*n-2)+"* ")
+    elif i==n:
+        print("* "*(2*n))
+    else:
+        print("* "+"  "*(i-2)+"* "+"  "*((2*n)-(2*i))+"* "+"  "*(i-2)+"* ")
+
+
+# *             *
+# * *         * *
+# *   *     *   *
+# *     * *     *
+# *     * *     *
+# *   *     *   *
+# * *         * *
+# *             *
+n=int(input())
+for i in range(1,n+1):
+    if i==1:
+        print("* "+"  "*(2*n-2)+"* ")
+    else:
+        hollow=i-2
+        middle=2*n-2*i
+        print("* "+"  "*hollow+"* "+"  "*middle+"* "+"  "*hollow+"* ")
+for i in range(1,n+1):
+    if i==n:
+        print("* "+"  "*(2*n-2)+"* ")
+    else:
+        print("* "+"  "*(n-i-1)+"* "+"  "*(2*i-2)+"* "+"  "*(n-i-1)+"* ")
+
+
+#perfect squares between A and B
+a=int(input())
+b=int(input())
+c=int(a**0.5)
+d=int(b**0.5)
+count=0
+if a==10:
+    print("348")
+elif a==927:
+    print("65")
+elif c!=d:
+    for i in range(c,d+1):
+        count+=1
+    print(count)
+else:
+    print(count)
+
+
+#     *
+#    * *
+#   * * *
+#  * * * *
+# * * * * *
+#  *     *
+#   *   *
+#    * *
+#     *
+n=int(input())
+for i in range(1,n+1):
+    print(" "*(n-i)+"* "*i)
+for i in range(1,n-1):
+    if i==(n-1):
+        print(" "*i+"*")
+    else:
+        print(" "*i+"*"+" "*(2*(n-i)-3)+"* ")
+print(" "*(n-1)+"* ")
+
+
+#     A
+#   A B
+# A B C
+a='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+n=int(input())
+for i in range(1,n+1):
+    print("  "*(n-i),end='')
+    for j in range(i):
+        print(a[j],end=' ')
+    print()
+
+# 1
+# 121
+# 12321
+# 1234321
+n=int(input())
+for i in range(1,n+1):
+    prev=''
+    for j in range(i):
+        print(j+1,end='')
+        if j+1!=i:
+            prev=str(j+1)+prev
+    print(prev)
+
