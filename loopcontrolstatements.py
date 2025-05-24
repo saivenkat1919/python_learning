@@ -1,9 +1,36 @@
 
 
+
+
+
+# sum of non-primes among N numbers
+n=int(input())
+sum=0
+for i in range(n):
+    number=int(input())
+    if number==2 or number==3:
+        continue
+    for j in range(2,number):
+        if number%j==0:
+            sum+=number
+            break
+print(sum)
+
+
+
 # case conversion
 # Input : PythonLearning
 # Output : python_learning
-
+s=input()
+output=''
+index=0
+for i in s:
+    if index!=0 and i.isupper():
+        output+="_"+i.lower()
+    else:
+        output+=i.lower()
+    index+=1
+print(output)
 
 
 #No of even's and odd's in range M,N

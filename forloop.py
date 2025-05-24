@@ -559,6 +559,7 @@ for i in range(1,n+1):
         print(a[j],end=' ')
     print()
 
+
 # 1
 # 121
 # 12321
@@ -572,3 +573,19 @@ for i in range(1,n+1):
             prev=str(j+1)+prev
     print(prev)
 
+
+# Sandglass star
+# * * * * *
+#  * * * *
+#   * * *
+#    * *
+#     *
+#    * *
+#   * * *
+#  * * * *
+# * * * * *
+n=int(input())
+for i in range(1,n):
+    print(" "*(i-1)+"* "*(n-i+1))
+for i in range(n,0,-1):
+    print(" "*(i-1)+"* "*(n-i+1))
