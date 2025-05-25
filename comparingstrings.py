@@ -34,3 +34,77 @@ print("A" < "B")
 print("BAD" >= "BAT")
 # output : False
 
+# print unicode values
+# input : code
+# output =
+# 99
+# 111
+# 100
+# 101
+s=input()
+for i in s:
+    print(ord(i))
+
+
+# count of characters
+# input :
+# google
+# 111
+# output:
+# 2
+s=input()
+n=int(input())
+count=0
+for i in s:
+    if ord(i)==n:
+        count+=1
+print(count)
+
+
+# print smallest letter in a word
+s=input()
+small=200
+for i in s:
+    if ord(i)<small:
+        small=ord(i)
+print(chr(small))
+
+
+# Unicode value of first capital letter in word
+# input : proGrammeR
+# output : 71
+s=input()
+ans=''
+for i in s:
+    if i.isupper():
+        ans=i
+        break
+print(ord(ans))
+
+
+# take input of unicode of letters and print the word
+# input
+# 3
+# 67 97 114
+# output:
+# Car
+n=int(input())
+for i in range(n):
+    m=int(input())
+    print(chr(m),end='')
+
+
+# Next Characters
+s=input()
+for i in s:
+    print(chr(ord(i)+1))
+
+# previous characters
+s=input()
+for i in s:
+    if i==' ':
+        continue
+    else:
+        print(chr(ord(i)-1))
+
+
