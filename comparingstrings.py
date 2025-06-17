@@ -126,3 +126,14 @@ for i in range(len(s)):
         word = ""
 
 print(first_word)
+
+# replacing sentence with next word
+# input : Hello
+# output : Ifmmp
+s=input()
+for i in s:
+    if i==' ':
+        print(' ',end='')
+    else:
+        print(chr(ord(i)+1),end='')
+
